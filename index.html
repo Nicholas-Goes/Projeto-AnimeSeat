@@ -15,12 +15,24 @@
     <title>AnimeSeat</title>
 
     <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="stylesheet" href="assets/fonts/style.css">
   </head>
   <body>
     <header id="header">
       <nav class="container">
         <a class="logo" href="#">anime<span>seat</span>.</a>
-        <div>...</div>
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Inicio</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-x"></div>
       </nav>
     </header>
 
@@ -35,7 +47,7 @@
             />
           </div>
           <div class="text">
-            <h1>Example</h1>
+            <h2 class="title">Example</h2>
             <p>Um site feito com base no OriginSix</p>
             <a class="button" href="#">Vem comigo</a>
           </div>
@@ -44,8 +56,12 @@
 
       <div class="divider-1"></div>
 
-      <section class="section">
-        <div class="container"></div>
+      <section class="section" id="about">
+        <div class="container grid">Sobre</div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container grid">Services</div>
       </section>
     </main>
     <footer></footer>
