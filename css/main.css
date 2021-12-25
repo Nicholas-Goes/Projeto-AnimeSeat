@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style-type: none;
 }
@@ -58,6 +62,26 @@ body {
   );
 }
 
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0.34),
+    rgb(122, 10, 214) 100%
+  );
+}
+
+.section .title {
+  margin-bottom: 1rem;
+}
+
+.section header {
+  margin-bottom: 4rem;
+}
+
+.section header strong {
+  color: hsl(273, 91%, 44%);
+}
 #header {
   width: 100%;
   border-bottom: 1px solid #e4e4e4;
@@ -67,6 +91,10 @@ body {
   left: 0;
   z-index: 100;
   background: white;
+}
+
+#header.scroll {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -118,16 +146,26 @@ nav .icon-x {
 
   position: absolute;
   right: 1.5rem;
+  top: -1.5rem;
+
+  transition: ease 0.2s;
 }
 
 nav.show div.icon-x {
   visibility: visible;
   opacity: 1;
+  top: 1.5rem;
 }
 
 nav .menu {
   opacity: 0;
   visibility: hidden;
+  top: -20rem;
+  transition: 0.2s;
+}
+
+nav .menu ul {
+  display: none;
 }
 
 nav.show .menu {
@@ -147,6 +185,10 @@ nav.show .menu {
 nav.show .menu {
   display: grid;
   place-content: center;
+}
+
+nav.show .menu ul {
+  display: grid;
 }
 
 nav.show ul.grid {
@@ -179,6 +221,19 @@ main {
   padding: 5rem 0;
 }
 
+#home {
+  overflow: hidden;
+}
+
+#home .container {
+  margin: 0;
+}
+
+#home .image img {
+  position: relative;
+  right: 2.93rem;
+}
+
 #home .image {
   position: relative;
 }
@@ -192,19 +247,6 @@ main {
   top: -16.8%;
   left: 16.8%;
   z-index: 0;
-}
-
-#home {
-  overflow: hidden;
-}
-
-#home .container {
-  margin: 0;
-}
-
-#home .image img {
-  position: relative;
-  right: 2.93rem;
 }
 
 #home .image img,
@@ -225,4 +267,61 @@ main {
 #home .text p {
   margin-bottom: 2rem;
   max-width: 100%;
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about .image img {
+  position: relative;
+}
+
+#about .image {
+  position: relative;
+}
+
+#about .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: rgb(122, 10, 214);
+  position: absolute;
+  top: -8.3%;
+  left: -33%;
+  z-index: 0;
+}
+
+#about .image img,
+#about .image::before {
+  border-radius: 0.25rem;
+}
+
+#about .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.cards.grid {
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid hsl(273, 91%, 44%);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
+}
+
+.card i {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  color: hsl(273, 91%, 44%);
+}
+
+.card .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
 }
