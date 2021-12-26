@@ -476,9 +476,48 @@ footer .social a:hover {
   transform: translateY(0);
 }
 
+
+
 @media (min-width: 1000px) {
-  .title {
-    font-size: 2.25rem;
+  .container {
+    max-width: 998px;
+    margin-left: auto;
+    margin-right: auto ;
+  }
+  nav .icon-menu {
+    display: none;
+  }
+  .section {
+    padding: 10rem 0;
+  }
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem "Poppins";
+  }
+
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
   }
 
 }
